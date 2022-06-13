@@ -132,4 +132,16 @@ const writeFile = (data) => {
 };
 
 // function call to initialize program
-questions();
+questions()
+  // getting user answers
+  .then((answers) => {
+    return generatePage(answers);
+  })
+  // using data to display on page
+  .then((data) => {
+    return writeFile(data);
+  })
+  // catching errors
+  .catch((err) => {
+    console.log(err);
+  });
