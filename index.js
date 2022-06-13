@@ -130,3 +130,6 @@ const writeFile = (data) => {
     }
   });
 };
+
+// function call to initialize program
+questions();
